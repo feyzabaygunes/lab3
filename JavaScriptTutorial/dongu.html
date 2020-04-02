@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Döngüler</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript For Döngüsü</h1>
+    <p>Döngüler birkaç kez kod bloğu yürütebilir.</p>
+    <h2>JavaScript Döngüler</h2>
+    <p>Her seferinde farklı bir değerle aynı kodu tekrar tekrar çalıştırmak istiyorsanız döngüler kullanışlıdır.</p>
+    <p>Genellikle dizilerle çalışırken durum budur:</p>
+    <h3>Yazmak yerine:</h3>
+    <div id="rcorners3">
+        <p>metin + = arabalar [0] + "";</p>
+        <p>metin + = arabalar [1] + "";</p>
+        <p>metin + = arabalar [2] + "";</p>
+        <p>metin + = arabalar [3] + "";</p>
+        <p>metin + = arabalar [4] + "";</p>
+        <p>metin + = arabalar [5] + "";</p>
+    </div>
+    <h3>Yazabilirsin:</h3>
+    <div id="rcorners3">
+        <p>var i;</p>
+        <p>for (i = 0; i <cars.length; i ++) {</p>
+        <p>metin + = arabalar [i] + "<br>";</p>
+        <p>}</p>
+    </div>
+    <h2>Farklı Döngü Çeşitleri</h2>
+    <p>JavaScript farklı döngü türlerini destekler:</p>
+    <p><li> for - bir kod bloğundan birkaç kez geçer</li></p>
+    <p><li>for / in - nesnenin özellikleri arasında dolaşır</li></p>
+    <p><li>for / of - yinelenebilir bir nesnenin değerleri arasında geçiş yapar</li></p>
+    <p><li>while - belirtilen bir koşul geçerliyken bir kod bloğundan geçer</li></p>
+    <p><li>do / while - ayrıca belirtilen bir koşul geçerliyken bir kod bloğunda da dolaşır</li></p>
+
+    <h2>For döngüsü</h2>
+    <p>For döngüsü aşağıdaki sözdizimine sahiptir:</p>
+    <div id="rcorners1">
+        <p>for (ifade 1; ifade 2; ifade 3) {</p>
+        <p>// yürütülecek kod bloğu</p>
+        <p>}</p>
+    </div>
+    <p><li>İfade 1, kod bloğunun yürütülmesinden önce (bir kez) yürütülür.</li></p>
+    <p><li>İfade 2, kod bloğunu yürütme koşulunu tanımlar.</li></p>
+    <p><li>İfade 3, kod bloğu yürütüldükten sonra (her seferinde) yürütülür.</li></p>
+    <div id="rcorners2">
+        <p>for (i = 0; i <5; i ++) {</p>
+        <p>text + = "Sayı" + i + "<br>";</p>
+        <p>}</p>
+    </div>
+    <p>Yukarıdaki örnekte şunları okuyabilirsiniz:</p>
+    <p><li>İfade 1 döngü başlamadan önce bir değişken ayarlar (var i = 0).</li></p>
+    <p><li>İfade 2, döngünün çalışması için koşulu tanımlar (i 5'ten küçük olmalıdır).</li></p>
+    <p><li>3. ifade, döngüdeki kod bloğu her yürütüldüğünde bir değeri (i ++) artırır.</li></p>
+    <h2>İfade 1</h2>
+    <p>Normalde döngüde kullanılan değişkeni başlatmak için 1. ifadeyi kullanırsınız (i = 0).</p>
+    <p>Bu her zaman böyle değildir, JavaScript umursamaz. Bildirim 1 isteğe bağlıdır.</p>
+    <p>1. ifadede birçok değeri başlatabilirsiniz (virgülle ayrılmış olarak):</p>
+    <div id="rcorners2">
+        <p>for (i = 0, len = cars.length, metin = ""; i <len; i ++) {</p>
+        <p>metin + = arabalar [i] + "<br>";</p>
+        <p>}</p>
+    </div>
+    <p>İfade 1'i atlayabilirsiniz (değerleriniz döngü başlamadan önce ayarlandığında olduğu gibi):</p>
+    <div id="rcorners2">
+        <p>var i = 2;</p>
+        <p>var len = araba uzunluğu;</p>
+        <p>var text = "";</p>
+        <p>for (; i <len; i ++) {</p>
+        <p>metin + = arabalar [i] + "<br>";</p>
+        <p>}</p>
+    </div>
+    <h2>İfade 2</h2>
+    <p>Genellikle ifade 2, ilk değişkenin durumunu değerlendirmek için kullanılır.</p>
+    <p>Bu her zaman böyle değildir,</p>
+    <p>JavaScript umursamıyor. Bildirim 2 de isteğe bağlıdır.</p>
+    <p>İfade 2 true değerini döndürürse, döngü yeniden başlar, false döndürürse döngü sona erer.</p>
+    <div id="rcorners1">
+        <p> 2. ifadeyi atlarsanız, döngü içinde bir mola vermeniz gerekir. Aksi takdirde döngü asla bitmez.
+            Bu, tarayıcınızı kilitler.</p>
+    </div>
+    <h2>İfade 3</h2>
+    <p>Genellikle ifade 3, ilk değişkenin değerini artırır.</p>
+    <p>Bu her zaman geçerli değildir, JavaScript umursamaz ve ifade 3 isteğe bağlıdır.</p>
+    <p>İfade 3, negatif artış (i--), pozitif artış (i = i + 15) veya başka bir şey yapabilir.</p>
+    <p>İfade 3 de atlanabilir (değerlerinizi döngü içinde artırdığınızda olduğu gibi):</p>
+    <div id="rcorners2">
+        <p>var i = 0;</p>
+        <p>var len = araba uzunluğu;</p>
+        <p>for (; i <len;) {</p>
+        <p>metin + = arabalar [i] + "<br>";</p>
+        <p>i ++;</p>
+        <p>}</p>
+    </div>
+    <br>
+    <h1>JavaScript While Döngüsü</h1>
+    <p>Döngüler, belirtilen bir koşul geçerli olduğu sürece bir kod bloğu yürütebilir.</p>
+    <h2>While Döngüsü</h2>
+    <p>While döngüsü, belirtilen bir koşul geçerli olduğu sürece bir kod bloğundan geçer.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners1">
+        <p>while (koşul) {</p>
+        <p>// yürütülecek kod bloğu</p>
+        <p>}</p>
+    </div>
+    <p>Aşağıdaki örnekte, döngüdeki kod çalışacak, bir değişken (i) 10'dan az olduğu sürece tekrar tekrar:</p>
+    <div id="rcorners2">
+        <p>(i <10) {</p>
+        <p>text + = "Sayı" + i;</p>
+        <p>i ++;</p>
+        <p>}</p>
+    </div>
+    <div id="rcorners1">
+        <p>Koşulda kullanılan değişkeni artırmayı unutursanız, döngü asla sona ermez. Bu, tarayıcınızı kilitler.</p>
+    </div>
+    <h2>Do / While Döngüsü</h2>
+    <p>Do / while döngüsü, while döngüsünün bir çeşididir.</p>
+    <p>Bu döngü, koşulun doğru olup olmadığını kontrol etmeden önce kod bloğunu bir kez yürütür,
+        ardından koşul doğru olduğu sürece döngüyü tekrarlar.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners1">
+        <p>do {</p>
+        <p>// yürütülecek kod bloğu</p>
+        <p>}</p>
+        <p>while (koşul);</p>
+    </div>
+    <p>Aşağıdaki örnekte bir do / while döngüsü kullanılmıştır. Koşul yanlış olsa bile döngü her zaman en az bir kez yürütülür,
+        kod bloğu koşul test edilmeden önce yürütüldüğünden:</p>
+    <div id="rcorners2">
+        <p>do {</p>
+        <p>text + = "Sayı" + i;</p>
+        <p>i ++;</p>
+        <p>}</p>
+        <p>(i <10);</p>
+    </div>
+    <div id="rcorners3">
+        <h3>Uyarı!</h3>
+        <p>Koşulda kullanılan değişkeni artırmayı unutmayın, aksi takdirde döngü asla bitmez!</p>
+    </div>
+</div>
+</body>
+</html>

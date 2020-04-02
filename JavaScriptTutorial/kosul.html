@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>If Koşul Yapıları</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript if ve else if</h1>
+    <p>Koşullu ifadeler, farklı koşullara bağlı olarak farklı eylemler gerçekleştirmek için kullanılır.</p>
+    <h2>Koşullu İfadeler</h2>
+    <p>Çoğu zaman kod yazarken, farklı kararlar için farklı eylemler gerçekleştirmek istersiniz.</p>
+    <p>Bunu yapmak için kodunuzda koşullu ifadeler kullanabilirsiniz.</p>
+    <h3>JavaScript'te şu koşullu ifadelere sahibiz:</h3>
+    <p><li>Belirli bir koşul doğruysa yürütülecek bir kod bloğu belirtmek için if kullanın</li></p>
+    <p><li>Aynı koşul yanlışsa yürütülecek bir kod bloğu belirtmek için else kullanın</li></p>
+    <p><li>Test edilecek yeni bir koşul belirtmek için, ilk koşul yanlışsa, else if kullanın</li></p>
+    <p><li>Yürütülecek birçok kod bloğunu belirtmek için switch'i kullanın</li></p>
+    <h2>İf Bildirimi</h2>
+    <p>Bir koşul doğruysa yürütülecek JavaScript kod bloğunu belirtmek için if ifadesini kullanın.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners1">
+        <p>if (koşul) {</p>
+        <p>// koşul doğruysa yürütülecek kod bloğu</p>
+        <p>}</p>
+    </div>
+    <h3>Küçük harflerle yazıldığını unutmayın. Büyük harfler (If veya IF) bir JavaScript hatası oluşturur.</h3>
+    <p>Saat 18: 00'den küçükse "İyi günler" selamlaması yapın:</p>
+    <div id="rcorners2">
+        <p>eğer (saat <18) {</p>
+        <p>tebrik = "İyi günler";</p>
+        <p>}</p>
+    </div>
+    <p>Selamlamanın sonucu:</p>
+    <p>İyi günler</p>
+    <h2>Else Deyimi</h2>
+    <p>Koşul yanlışsa yürütülecek bir kod bloğu belirtmek için else deyimini kullanın.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners1">
+        <p>if (koşul) {</p>
+        <p>// koşul doğruysa yürütülecek kod bloğu</p>
+        <p>} else {</p>
+        <p>// koşul yanlışsa yürütülecek kod bloğu</p>
+        <p>}</p>
+    </div>
+    <p>Saat 18'den küçükse, "İyi günler" selamı, aksi halde "İyi akşamlar" oluşturun:</p>
+    <div id="rcorners2">
+        <p>if (saat <18) {</p>
+        <p>tebrik = "İyi günler";</p>
+        <p>} else {</p>
+        <p> tebrik = "İyi akşamlar";</p>
+        <p>}</p>
+    </div>
+    <p>Selamlamanın sonucu:</p>
+    <p>İyi günler</p>
+    <h2>Else If Deyimi</h2>
+    <p>İlk koşul yanlışsa yeni bir koşul belirtmek için else if deyimini kullanın.</p>
+    <h3>Sözdizimi</h3>
+    <div id="rcorners1">
+        <p>eğer (koşul1) {</p>
+        <p>// koşul1 doğruysa yürütülecek kod bloğu</p>
+        <p>} else if (koşul2) {</p>
+        <p>// koşul1 yanlış ve koşul2 doğruysa yürütülecek kod bloğu</p>
+        <p>} else {</p>
+        <p>// koşul1 yanlış ve koşul2 yanlışsa yürütülecek kod bloğu</p>
+        <p>}</p>
+    </div>
+    <p>Saat 10:00'dan azsa, "Günaydın" karşılaması oluşturun, değilse, saat 20:00'den azsa,
+        "Günaydın" karşılaması oluşturun, aksi halde "iyi akşamlar":</p>
+    <div id="rcorners2">
+        <p>if (zaman <10) {</p>
+        <p>tebrik = "Günaydın";</p>
+        <p>} else if (zaman <20) {</p>
+        <p>tebrik = "İyi günler";</p>
+        <p>} else {</p>
+        <p>tebrik = "İyi akşamlar";</p>
+        <p>}</p>
+    </div>
+    <p>Selamlamanın sonucu:</p>
+    <p>İyi günler</p>
+    <br>
+</div>
+</body>
+</html>
