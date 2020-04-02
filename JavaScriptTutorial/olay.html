@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Olaylar</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>JavaScript Olayları</h1>
+    <p>HTML olayları, HTML öğelerinde meydana gelen "şeyler" dir.</p>
+    <p>HTML sayfalarında JavaScript kullanıldığında, JavaScript bu olaylara "tepki verebilir".</p>
+    <h2>HTML Etkinlikleri</h2>
+    <p>HTML etkinliği, tarayıcının yaptığı veya kullanıcının yaptığı bir şey olabilir.</p>
+    <div id="rcorners1">
+        <p>HTML olaylarına bazı örnekler:</p>
+        <p><li>Bir HTML web sayfasının yüklenmesi tamamlandı.</li></p>
+        <p><li>Bir HTML giriş alanı değiştirildi.</li></p>
+        <p><li>Bir HTML düğmesi tıklandı.</li></p>
+    </div>
+    <p>Çoğu zaman, olaylar meydana geldiğinde, bir şeyler yapmak isteyebilirsiniz.</p>
+    <p>JavaScript, olaylar algılandığında kod yürütmenizi sağlar.</p>
+    <p>HTML, HTML kodlarına JavaScript kodlu olay işleyici niteliklerinin eklenmesine olanak tanır.</p>
+
+    <p>Tek tırnak işaretleri ile:</p>
+    <p>< element event = 'bazı JavaScript'> </p>
+    <br>
+    <p>Çift tırnak işareti ile:</p>
+    <p>< element event = "bazı JavaScript"></p>
+    <p>Aşağıdaki örnekte, bir < button > öğesine bir onclick niteliği (kodlu) eklenmiştir:</p>
+    <div id="rcorners2">
+        <br>
+        < button onclick = "document.getElementById ('demo'). innerHTML = Tarih ()"> Saat? < /button>
+        <br><br>
+    </div>
+    <h2>Ortak HTML Etkinlikleri</h2>
+    <p>Aşağıda bazı yaygın HTML etkinliklerinin bir listesi verilmiştir:</p>
+    <table>
+        <tr>
+            <th>Etkinlik</th>
+            <th>Açıklaması</th>
+        </tr>
+        <tr>
+            <td>onchange</td>
+            <td>Bir HTML öğesi değiştirildi</td>
+        </tr>
+        <tr>
+            <td>onclick</td>
+            <td>Kullanıcı bir HTML öğesini tıklar</td>
+        </tr>
+        <tr>
+            <td>onmouseover</td>
+            <td>Kullanıcı fareyi bir HTML öğesinin üzerine getirir</td>
+        </tr>
+        <tr>
+            <td>onmouseout</td>
+            <td>Kullanıcı fareyi bir HTML öğesinden uzaklaştırır</td>
+        </tr>
+        <tr>
+            <td>onkeydown</td>
+            <td>Kullanıcı bir klavye tuşuna basar</td>
+        </tr>
+        <tr>
+            <td>onload</td>
+            <td>Tarayıcı sayfayı yüklemeyi tamamladı</td>
+        </tr>
+    </table>
+
+    <h2>JavaScript ne yapabilir?</h2>
+    <p>Olay işleyicileri, kullanıcı girdisini, kullanıcı eylemlerini ve tarayıcı eylemlerini işlemek ve doğrulamak için kullanılabilir:</p>
+    <p><li>Bir sayfa her yüklendiğinde yapılması gerekenler</li></p>
+    <p><li>Sayfa kapalıyken yapılması gerekenler</li></p>
+    <p><li>Kullanıcı bir düğmeyi tıkladığında gerçekleştirilmesi gereken eylem</li></p>
+    <p><li>Bir kullanıcı veri girdiğinde doğrulanması gereken içerik</li></p>
+    <p><li>Ve dahası...</li></p>
+    <br><br>
+    <p>JavaScript'in etkinliklerle çalışmasına izin vermek için birçok farklı yöntem kullanılabilir:</p>
+    <p><li>HTML olay özellikleri doğrudan JavaScript kodunu yürütebilir</li></p>
+    <p><li>HTML olay özellikleri JavaScript işlevlerini çağırabilir</li></p>
+    <p><li>HTML öğelerine kendi olay işleyici işlevlerinizi atayabilirsiniz</li></p>
+    <p><li>Etkinliklerin gönderilmesini veya işlenmesini engelleyebilirsiniz</li></p>
+    <p><li>Ve dahası...</li></p>
+    <br><br>
+</div>
+</body>
+</html>

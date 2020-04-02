@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diziler</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+    <div class="example">
+        <h1>JavaScript Dizileri</h1>
+        <p>JavaScript dizileri, birden çok değeri tek bir değişkende depolamak için kullanılır.</p>
+        <div id="rcorners2">
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+        </div>
+        <h2>Dizi nedir?</h2>
+        <p>Dizi, aynı anda birden fazla değeri tutabilen özel bir değişkendir.</p>
+        <p>Bir öğe listeniz varsa (örneğin, araba adlarının bir listesi), arabaları tek değişkenlerde saklamak şöyle görünebilir:</p>
+        <div id="rcorners2">
+            <p>var car1 = "Saab";</p>
+            <p>var car2 = "Volvo";</p>
+            <p>var car3 = "BMW";</p>
+        </div>
+        <p>Ancak, ya arabalar arasında dolaşıp belirli bir tane bulmak istiyorsanız? Peki ya 3 değil, 300 arabanız olsaydı?</p>
+        <h3>Çözüm bir dizi!</h3>
+        <p>Bir dizi, tek bir ad altında birçok değeri tutabilir,
+            ve bir indeks numarasına başvurarak değerlere erişebilirsiniz.</p>
+        <h2>Dizi Oluşturma</h2>
+        <p>Bir dizi değişmezi kullanmak, bir JavaScript Dizisi oluşturmanın en kolay yoludur.</p>
+        <h3>Sözdizimi:</h3>
+        <p>var dizi_name = [item1, item2, ...];</p>
+        <div id="rcorners2">
+            <p>Örnek</p>
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+        </div>
+        <p>Boşluklar ve satır kesmeleri önemli değildir.</p>
+        <br>
+        <p>Bir bildirim birden çok satıra yayılabilir:</p>
+        <div id="rcorners2">
+            <p>var arabalar = [ "Saab", "Volvo", "BMW" ];</p>
+        </div>
+        <h2>JavaScript new Anahtar Kelimesini Kullanma </h2>
+        <p>Aşağıdaki örnek aynı zamanda bir Array oluşturur ve buna Array değerleri verir:</p>
+        <div id="rcorners2">
+            <p>var cars = new Dizi ("Saab", "Volvo", "BMW");</p>
+        </div>
+        <p>Yukarıdaki iki örnek tamamen aynıdır.</p>
+        <p>New Array () kullanmaya gerek yoktur.</p>
+        <p>Basitlik, okunabilirlik ve yürütme hızı için ilkini kullanın (dizi değişmez yöntemi).</p>
+        <h2>Dizinin Elemanlarına Erişme</h2>
+        <p>Bir dizi öğesine dizin numarasına bakarak erişirsiniz.</p>
+        <p>Bu ifade, otomobillerdeki ilk öğenin değerine erişir:</p>
+        <p>var name = arabalar [0];</p>
+        <div id="rcorners2">
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+            <p>document.getElementById ("demo"). innerHTML = arabalar [0];</p>
+        </div>
+        <br>
+        <div id="rcorners3">
+            <p>Not: Dizi dizinleri 0 ile başlar.</p>
+            <p>[0] ilk elementtir. [1] ikinci elementtir.</p>
+        </div>
+        <h2>Dizi Öğesini Değiştirme</h2>
+        <p>Bu ifade, otomobillerdeki ilk elemanın değerini değiştirir:</p>
+        <p>arabalar [0] = "Opel";</p>
+        <div id="rcorners2">
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+            <p>arabalar [0] = "Opel";</p>
+            <p>getElementById ("demo"). innerHTML = arabalar [0];</p>
+        </div>
+        <h2>Tam Diziye Erişme</h2>
+        <p>JavaScript ile, dizi adına başvurarak tam diziye erişilebilir:</p>
+        <div id="rcorners2">
+            <p>var cars = ["Saab", "Volvo", "BMW"];</p>
+            <p>document.getElementById ("demo"). innerHTML = arabalar;</p>
+        </div>
+        <h2>Diziler Nesnedir</h2>
+        <p>Diziler özel bir nesne türüdür.</p>
+        <p>JavaScript'teki typeof operatörü diziler için "object" değerini döndürür.</p>
+        <p>Ancak, JavaScript dizileri en iyi dizi olarak tanımlanır.</p>
+        <p>Diziler, "öğelerine" erişmek için sayıları kullanır. Bu örnekte, [0] kişisi John'u döndürür:</p>
+        <div id="rcorners2">
+            <p>Dizi:</p>
+            <p>var kişi = ["John", "Doe", 46];</p>
+        </div>
+        <p>Nesneler "üyelerine" erişmek için adları kullanır. Bu örnekte kişi. firstName, John'u döndürür:</p>
+        <div id="rcorners2">
+            <p>Nesne:</p>
+            <p>var person = {firstName: "John", lastName: "Doe", yaş: 46};</p>
+        </div>
+        <h2>Dizi Öğeleri Nesne Olabilir</h2>
+        <p>JavaScript değişkenleri nesne olabilir. Diziler özel nesnelerdir.</p>
+        <p>Bu nedenle, aynı Dizide farklı türde değişkenlere sahip olabilirsiniz.</p>
+        <p>Bir Dizide nesneler olabilir.</p>
+        <p>Bir Dizide işlevleriniz olabilir. Bir Dizide diziler olabilir:</p>
+        <div id="rcorners1">
+            <p>myArray [0] = Date.now;</p>
+            <p>myArray [1] = myFunction;</p>
+            <p>myArray [2] = myCars;</p>
+        </div>
+        <h2>Dizi Özellikleri ve Yöntemleri</h2>
+        <p>JavaScript dizilerinin gerçek gücü yerleşik dizi özellikleri ve yöntemleridir:</p>
+        <div id="rcorners2">
+            <p>Örnekler</p>
+            <p>var x = araba.uzunluğu; // length özelliği, öğe sayısını döndürür</p>
+            <p>var y = cars.sort (); // sort () yöntemi dizileri sıralar</p>
+        </div>
+        <h3>Length Özelliği</h3>
+        <p>Bir dizinin length özelliği, bir dizinin uzunluğunu (dizi öğesi sayısı) döndürür.</p>
+        <div id="rcorners2">
+            <p>var fruit = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>fruits.length; // meyvelerin uzunluğu 4</p>
+        </div>
+        <p>Length özelliği her zaman en yüksek dizi dizininden bir tanesidir.</p>
+        <h3>İlk Dizi Öğesine Erişim</h3>
+        <div id="rcorners2">
+            <p>meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>önce var = meyveler [0];</p>
+        </div>
+        <h3>Son Dizi Öğesine Erişme</h3>
+        <div id="rcorners2">
+            <p>meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>var last = meyveler [meyveler uzunluk - 1];</p>
+        </div>
+        <h3>Döngü Dizisi Elemanları</h3>
+        <p>Bir dizi boyunca döngü oluşturmanın en güvenli yolu bir for döngüsü kullanmaktır:</p>
+        <div id="rcorners2">
+            <p>var meyve, metin, fLen, i;</p>
+            <p>meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>fLen = meyveler. uzunluk;</p>
+            <br>
+            <p>metin = "<ul>";</p>
+            <p>for (i = 0; i <fLen; i ++) {</p>
+            <p>metin + = "<li>" + meyveler [i] + "</li>";</p>
+            <p>}</p>
+            <p>metin + = "</ul>";</p>
+        </div>
+        <p>Array.forEach() işlevini de kullanabilirsiniz.</p>
+        <div id="rcorners2">
+            <p>var meyveler, metin;</p>
+            <p>meyveler = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <br>
+            <p>metin = "<ul>";</p>
+            <p>fruits.forEach (myfunction);</p>
+            <p>metin + = "</ul>";</p>
+            <br>
+            <p>function myFunction (value) {</p>
+            <p>metin + = "<li>" + değer + "</li>";</p>
+            <p>}</p>
+        </div>
+        <h2>Dizi Öğeleri Ekleme</h2>
+        <p>Bir diziye yeni bir öğe eklemenin en kolay yolu push () yöntemini kullanmaktır:</p>
+        <div id="rcorners2">
+            <p>var fruit = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>fruits.push ( "limon"); // meyvelere yeni bir element (Limon) ekliyor</p>
+        </div>
+        <br>
+        <p>Length öğesi kullanılarak bir diziye yeni öğe de eklenebilir:</p>
+        <div id="rcorners2">
+            <p>var fruit = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>meyveler [meyveler] = "Limon"; // meyvelere yeni bir element (Limon) ekliyor</p>
+        </div>
+        <div id="rcorners3">
+            <h3>UYARI!</h3>
+            <p>Yüksek dizine sahip öğeler eklemek, bir dizide tanımlanmamış "delikler" oluşturabilir:</p>
+        </div>
+        <div id="rcorners2">
+            <p>var fruit = ["Muz", "Portakal", "Elma", "Mango"];</p>
+            <p>meyveler [6] = "Limon"; // meyvelere yeni bir element (Limon) ekliyor</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

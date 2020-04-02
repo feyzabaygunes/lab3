@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stringler, Sayılar</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>Stringler</h1>
+    <p>JavaScript dizeleri metin depolamak ve değiştirmek için kullanılır.</p>
+    <h2>JavaScript Dizeleri</h2>
+    <p>JavaScript dizesi, tırnak içine yazılmış sıfır veya daha fazla karakterdir.</p>
+    <div id="rcorners2">
+        <p>var x = "John Doe";</p>
+    </div>
+    <p>Tek veya çift tırnak kullanabilirsiniz:</p>
+    <div id="rcorners2">
+        <p>var carName1 = "Volvo XC60"; // İkili alıntı</p>
+        <p>var carName2 = 'Volvo XC60'; // Tek tırnak</p>
+    </div>
+    <p>Dizeyi çevreleyen tırnak işaretleriyle eşleşmedikleri sürece, bir dizenin içindeki tırnak işaretlerini kullanabilirsiniz:</p>
+    <div id="rcorners2">
+        <p>var answer1 = "Her şey yolunda";</p>
+        <p>var answer2 = "Ona 'Johnny' deniyor";</p>
+        <p>var answer3 = 'Ona "Johnny" denir';</p>
+    </div>
+    <h2>Dize uzunluğu</h2>
+    <p>Bir dizenin uzunluğunu bulmak için yerleşik length özelliğini kullanın:</p>
+    <div id="rcorners2">
+        <p>var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";</p>
+        <p>var sln = txt.length;</p>
+    </div>
+    <h2>Kaçış Karakteri</h2>
+    <p>Dizeler tırnak içinde yazılması gerektiğinden, JavaScript bu dizeyi yanlış anlayacaktır:</p>
+    <div id="rcorners2">
+        <p>var x = "Biz kuzeyden" Vikingler "diyoruz.";</p>
+    </div>
+    <p>Dize "Biz sözde" olarak kesilecektir.</p>
+    <p>Bu problemden kaçınmanın çözümü, ters eğik çizgi kaçış karakterini kullanmaktır.</p>
+    <p>Ters eğik çizgi (\) çıkış karakteri özel karakterleri dize karakterlerine dönüştürür:</p>
+    <table>
+        <tr>
+            <th>Kod</thKod>
+            <th>Sonuç</th>
+            <th>Açıklama</th>
+        </tr>
+        <tr>
+            <td>\'</td>
+            <td>'</td>
+            <td>Tek alıntı</td>
+        </tr>
+        <tr>
+            <td>\"</td>
+            <td>"</td>
+            <td>Çift tırnak</td>
+        </tr>
+        <tr>
+            <td>\\</td>
+            <td>\</td>
+            <td>Backslash</td>
+        </tr>
+    </table>
+    <br>
+    <p>\ "Dizisi bir dizeye çift tırnak ekler:</p>
+    <div id="rcorners2">
+        <p>var x = "Biz kuzeyden \" Vikingler \ "diyoruz.";</p>
+    </div>
+    <br>
+    <p>Dizi bir dizeye tek bir tırnak ekler:</p>
+    <div id="rcorners2">
+        <p>var x = 'Tamam.';</p>
+    </div>
+    <br>
+    <p>\\ dizisi bir dizeye ters eğik çizgi ekler:</p>
+    <div id="rcorners2">
+        <p>var x = "\\ karakterine ters eğik çizgi denir.";</p>
+    </div>
+    <br>
+    <p>JavaScript'te altı başka kaçış dizisi daha geçerlidir:</p>
+    <table>
+        <tr>
+            <th>Kod</th>
+            <th>Sonucu</th>
+        </tr>
+        <tr>
+            <td>\b</td>
+            <td>geri tuşu</td>
+        </tr>
+        <tr>
+            <td>\f</td>
+            <td>Form besleme</td>
+        </tr>
+        <tr>
+            <td>\n</td>
+            <td>Yeni satır</td>
+        </tr>
+        <tr>
+            <td>\r</td>
+            <td>Satırbaşı</td>
+        </tr>
+        <tr>
+            <td>\t</td>
+            <td>Yatay Tablo</td>
+        </tr>
+        <tr>
+            <td>\v</td>
+            <td>Dikey Tablo</td>
+        </tr>
+    </table>
+    <p>Yukarıdaki 6 kaçış karakteri orijinal olarak daktiloları, teletipleri ve faks makinelerini kontrol etmek için tasarlanmıştır.
+        HTML'de bir anlam ifade etmiyorlar.</p>
+    <h2>Uzun Kod Satırlarını Kırmak</h2>
+    <p>En iyi okunabilirlik için, programcılar genellikle 80 karakterden uzun kod satırlarından kaçınmayı sever.</p>
+    <p>Bir JavaScript ifadesi bir satıra sığmıyorsa, bunu kırmak için en iyi yer bir operatörden sonradır:</p>
+    <div id="rcorners2">
+        <p>document.getElementById ("demo"). innerHTML = "Merhaba dolly!";</p>
+    </div>
+    <p>Ayrıca, metin dizesi içindeki bir kod satırını tek bir ters eğik çizgiyle ayırabilirsiniz:</p>
+    <div id="rcorners2">
+        <p> document.getElementById ("demo"). innerHTML = "Merhaba \ Dolly "!;</p>
+    </div>
+    <p> \ Yöntemi tercih edilen yöntem değildir. Evrensel desteği olmayabilir.
+        Bazı tarayıcılar \ karakterinin arkasındaki boşluklara izin vermez.</p>
+    <br>
+    <p>Bir dizeyi ayırmanın daha güvenli bir yolu, dize eklemesini kullanmaktır:</p>
+    <div id="rcorners2">
+        <p>document.getElementById ("demo"). innerHTML = "Merhaba" + "Dolly!";</p>
+    </div>
+    <br>
+    <p>Bir kod satırını ters eğik çizgiyle ayıramazsınız:</p>
+    <div id="rcorners2">
+        <p> document.getElementById ("demo"). innerHTML = \ "Merhaba dolly!";</p>
+    </div>
+    <h2>Dizeler Nesne Olabilir</h2>
+    <p>Normalde, JavaScript dizeleri değişmez değerlerden oluşturulan ilkel değerlerdir:</p>
+    <p><li>var firstName = "John";</li></p>
+    <p>Ancak dizeler, new anahtar kelimesine sahip nesneler olarak da tanımlanabilir:</p>
+    <p><li>var firstName = yeni Dize ("John");</li></p>
+    <div id="rcorners2">
+        <p>var x = "John";</p>
+        <p>var y = yeni Dize ("John");</p>
+        <br>
+        <p>// typeof x, string döndürür</p>
+        <p>// typeof y nesneyi döndürür</p>
+    </div>
+
+
+    <div id="rcorners1">
+        <p>Nesne olarak dizeler oluşturmayın. Yürütme hızını yavaşlatır.
+            Yeni anahtar kelime kodu karmaşık hale getirir. Bu bazı beklenmedik sonuçlar doğurabilir.</p>
+    </div>
+    <p>== operatörünü kullanırken, eşit dizeler eşittir:</p>
+
+    <div id="rcorners2">
+        <p>var x = "John";</p>
+        <p>var y = yeni Dize ("John");</p>
+        <br>
+        <p>// (x == y) doğru çünkü x ve y eşit değerlere sahip</p>
+    </div>
+    <p>=== işleci kullanılırken eşit dizeler eşit değildir, çünkü === işleci hem tür hem de değerde eşitlik bekler.</p>
+    <div id="rcorners2">
+        <p>var x = "John";</p>
+        <p>var y = yeni Dize ("John");</p>
+        <br>
+        <p>// (x === y) yanlıştır, çünkü x ve y farklı türlere sahiptir (dize ve nesne)</p>
+    </div>
+    <p>Veya daha da kötüsü. Nesneler karşılaştırılamaz:</p>
+    <div id="rcorners2">
+        <p>var x = yeni Dize ("John");</p>
+        <p>var y = yeni Dize ("John");</p>
+        <br>
+        <p>// (x == y) yanlış çünkü x ve y farklı nesneler</p>
+    </div>
+    <div id="rcorners1">
+        <p>(X == y) ve (x === y) arasındaki farka dikkat edin.</p>
+        <p>İki JavaScript nesnesinin karşılaştırılması her zaman yanlış döndürür.</p>
+    </div>
+    <h1>Sayılar</h1>
+    <p>JavaScript'in yalnızca bir tür numarası vardır. Sayılar ondalıklı veya ondalıksız olarak yazılabilir.</p>
+    <div id="rcorners2">
+        <p>var x = 3.14; // Ondalık basamaklı bir sayı</p>
+        <p>var y = 3; // Ondalıksız sayı</p>
+    </div>
+    <br>
+    <p>Çok büyük veya çok küçük sayılar bilimsel (üslü) gösterimle yazılabilir:</p>
+    <div id="rcorners2">
+        <p>var x = 123e5; // 12300000</p>
+        <p>var y = 123e-5; // 0.00123</p>
+
+    </div>
+    <h2>JavaScript Numaraları Her Zaman 64 bit Kayan Noktadır</h2>
+    <p>Diğer birçok programlama dilinin aksine, JavaScript tamsayılar, kısa, uzun, kayan nokta vb.
+        gibi farklı sayı türlerini tanımlamaz.</p>
+    <p>JavaScript numaraları her zaman çift kesinlikli kayar nokta sayısı olarak saklanır,
+        uluslararası IEEE 754 standardını izleyerek.</p>
+    <p>Bu biçim sayıları 64 bit olarak saklar; burada sayı (kesir) 0 ila 51 bitlerinde,
+        üs 52 ila 62 bitlerinde ve oturum açma biti 63'te saklanır:</p>
+    <table>
+        <tr>
+            <th>Değer (aka Kesir / Mantissa)</th>
+            <th>Üs</th>
+            <th>İşaret</thİşaret>
+        </tr>
+        <tr>
+            <td>52 bit (0 - 51)</td>
+            <td>11 bit (52 - 62)</td>
+            <td>1 bit (63)</td>
+        </tr>
+    </table>
+    <h2>Hassaslık</h2>
+    <p>Tamsayılar (nokta veya üs notasyonu olmayan sayılar) 15 basamağa kadar doğrudur.</p>
+    <div id="rcorners2">
+        <p>var x = 999999999999999; // x 999999999999999 olacak</p>
+        <p>var y = 9999999999999999; // y 10000000000000000 olacak</p>
+    </div>
+    <br>
+    <p>Maksimum ondalık sayı 17'dir, ancak kayan nokta aritmetiği her zaman %100 doğru değildir:</p>
+    <div id="rcorners2">
+       <p>var x = 0.2 + 0.1 'dir; // x 0.30000000000000004 olacak</p>
+    </div>
+    <br>
+    <p>Yukarıdaki sorunu çözmek için çoğalmaya ve bölmeye yardımcı olur:</p>
+    <div id="rcorners2">
+        <p>var x = (0.2 x 10 + 0.1 x 10) / 10; // x 0,3 olacak</p>
+    </div>
+    <h2>Sayı ve Dize Ekleme</h2>
+    <div id="rcorners3">
+        <h3>UYARI !!</h3>
+        <p>JavaScript hem ekleme hem de birleştirme için + işlecini kullanır.</p>
+        <p>Sayılar eklenir.</p>
+        <p>Dizeler birleştirilir.</p>
+    </div>
+    <p>İki sayı eklerseniz sonuç bir sayı olur:</p>
+    <div id="rcorners2">
+        <p>var x = 10;</p>
+        <p>var y = 20;</p>
+        <p>var z = x + y; // z 30 (bir sayı) olacak</p>
+    </div>
+    <br>
+    <p>İki dize eklerseniz, sonuç bir dize birleşimi olur:</p>
+    <div id="rcorners2">
+        <p>var x = "10";</p>
+        <p>var y = "20";</p>
+        <p>var z = x + y; // z 1020 olacak (bir dize)</p>
+    </div>
+    <br>
+    <p>Bir sayı ve dize eklerseniz, sonuç bir dize birleşimi olur:</p>
+    <div id="rcorners2">
+        <p>var x = 10;</p>
+        <p>var y = "20";</p>
+        <p>var z = x + y; // z 1020 olacak (bir dize)</p>
+    </div>
+    <br>
+    <p>Bir dize ve sayı eklerseniz, sonuç bir dize birleştirmesi olur:</p>
+    <div id="rcorners2">
+        <p>var x = "10";</p>
+        <p>var y = 20;</p>
+        <p>var z = x + y;</p>
+        <p>// z 1020 olacak (bir dize)</p>
+    </div>
+    <br>
+    <p>Yaygın bir hata, bu sonucun 30 olmasını beklemektir:</p>
+    <div id="rcorners2">
+        <p>var x = 10;</p>
+        <p>var y = 20;</p>
+        <p>var z = "Sonuç:" + x + y;</p>
+    </div>
+    <br>
+    <p>Yaygın bir hata, bu sonucun 102030 olmasını beklemektir:</p>
+    <div id="rcorners2">
+        <p>var x = 10;</p>
+        <p>var y = 20;</p>
+        <p>var z = "30";</p>
+        <p>var sonuç = x + y + z;</p>
+    </div>
+    <br>
+    <div id="rcorners1">
+        <p>JavaScript yorumlayıcısı soldan sağa doğru çalışır.</p>
+        <p>İlk 10 + 20 eklenir, çünkü x ve y'nin her ikisi de sayıdır.</p>
+        <p>Daha sonra z + bir dize olduğu için 30 + "30" birleştirilir.</p>
+    </div>
+</div>
+</body>
+</html>

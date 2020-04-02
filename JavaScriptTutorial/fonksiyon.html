@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fonksiyonlar</title>
+    <link rel="stylesheet" href="js.css">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <h2>    JavaScript</h2>
+        <li><a href="/JavaScriptTutorial/giris.html">JavaScript Giriş</a></li>
+        <li><a href="/JavaScriptTutorial/syntax.html">Yazılım(Syntax) Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/degisken.html">Değişkenler</a></li>
+        <li><a href="/JavaScriptTutorial/operator.html">Operatörler</a></li>
+        <li><a href="/JavaScriptTutorial/aritmetik.html">Aritmetik</a></li>
+        <li><a href="/JavaScriptTutorial/veritipleri.html">Veri Tipleri</a></li>
+        <li><a href="/JavaScriptTutorial/fonksiyon.html">Fonksiyon Yapısı</a></li>
+        <li><a href="/JavaScriptTutorial/olay.html">Olaylar(Events)</a></li>
+        <li><a href="/JavaScriptTutorial/stringsayi.html">Stringler, Sayılar</a></li>
+        <li><a href="/JavaScriptTutorial/dizi.html">Diziler ve Dizi İşlemleri</a></li>
+        <li><a href="/JavaScriptTutorial/kosul.html">If Koşul Yapıları</a></li>
+        <li><a href="/JavaScriptTutorial/dongu.html">Döngüler</a></li>
+        <li><a href="/JavaScriptTutorial/donusum.html">Tip Dönüşümleri</a></li>
+        <li><a href="/JavaScriptTutorial/mimari.html">Çalışma Yapısı ve Genel Mimarisi</a></li>
+    </ul>
+</div>
+<div class="example">
+    <h1>Fonksiyonlar</h1>
+    <p>JavaScript işlevi, belirli bir görevi gerçekleştirmek için tasarlanmış bir kod bloğudur.</p>
+    <p>"Bir şey" çağrdığında bir JavaScript işlevi yürütülür (onu çağırır).</p>
+    <div id="rcorners2">
+        <p>function myFunction (p1, p2) {</p>
+        <p>return p1 * p2; // Fonksiyon p1 ve p2'nin ürününü döndürür</p>
+    </div>
+    <h2>JavaScript Fonksiyon Sözdizimi</h2>
+    <p>Bir JavaScript işlevi, Fonksiyon anahtar sözcüğüyle, ardından bir adla ve ardından parantez () ile tanımlanır.</p>
+    <p>Fonksiyon adları harf, rakam, alt çizgi ve dolar işareti içerebilir (değişkenlerle aynı kurallar).</p>
+    <p>Parantezler virgülle ayrılmış parametre adları içerebilir: (parametre1, parametre2, ...)</p>
+    <p>Fonksiyon tarafından yürütülecek kod, küme parantezlerinin içine yerleştirilir: {}</p>
+    <div id="rcorners2">
+        <p>fonksiyon adı (parametre1, parametre2, parametre3) {</p>
+        <p>// yürütülecek kod</p>
+        <p>}</p>
+    </div>
+    <p>İşlev parametreleri, işlev tanımındaki parantez () içinde listelenir.</p>
+    <p>İşlev bağımsız değişkenleri, işlev çağrıldığında işlev tarafından alınan değerlerdir.</p>
+    <p>İşlevin içinde, bağımsız değişkenler (parametreler) yerel değişkenler gibi davranır.</p>
+    <div id="rcorners1">
+        <p>Bir İşlev, diğer programlama dillerinde bir Prosedür veya Alt Program ile hemen hemen aynıdır.</p>
+    </div>
+    <h2>İşlev Çağırma</h2>
+    <p>"Bir şey" işlevi çağırdığında (çağırdığında) işlevin içindeki kod yürütülür:</p>
+    <p><li>Bir olay meydana geldiğinde (kullanıcı bir düğmeyi tıkladığında)</p>
+    <p><li>JavaScript kodundan çağrıldığında (çağrıldığında)</p>
+    <p><li>Otomatik olarak (kendi kendine çağrılır)</p>
+
+    <h2>İşlev Dönüşü</h2>
+    <p>JavaScript bir iade ifadesine ulaştığında, işlev yürütmeyi durdurur.</p>
+    <p>İşlev bir ifadeden çağrıldıysa, JavaScript çağırma ifadesinden sonra kodu çalıştırmak için "geri döner".</p>
+    <p>İşlevler genellikle bir dönüş değeri hesaplar. Dönüş değeri "arayan" a geri döndürülür:</p>
+    <div id="rcorners2">
+        <p>İki sayının çarpımını hesaplayın ve sonucu döndürün:</p>
+        <p>var x = myFunction (4, 3); // İşlev çağrılır, dönüş değeri x ile biter</p>
+        <br>
+        <p>function myFunction (a, b) {</p>
+        <p>return * b; // Fonksiyon a ve b'nin çarpımını döndürür</p>
+        <p>}</p>
+        <p>X içindeki sonuç:</p>
+        <p>12</p>
+    </div>
+    <h2>Neden Fonksiyonlar?</h2>
+    <p><li>Kodu yeniden kullanabilirsiniz: Kodu bir kez tanımlayın ve birçok kez kullanın.</li>
+    <p><li>Farklı sonuçlar elde etmek için aynı kodu farklı argümanlarla birçok kez kullanabilirsiniz.</p>
+    <p>Fahrenheit'i Celsius'a dönüştürün:</p>
+    <div id="rcorners2">
+        <p>function toCelsius (fahrenheit) {</p>
+        <p>dönüş (5/9) * (fahrenhayt-32);</p>
+        <p>}</p>
+        <p>document.getElementById ("demo"). innerHTML = toCelsius (77);</p>
+    </div>
+
+
+
+
+
+
+
+</div>
+</body>
+</html>
